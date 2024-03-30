@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { ReactNode } from "react";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import { gotham } from "@/common/styles/font";
+
+import { cn } from "@/common/styles/libs/cn";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +19,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn("font-gotham", gotham.variable)}>{children}</body>
     </html>
   );
 }

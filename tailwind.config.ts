@@ -7,7 +7,11 @@ const config: Config = {
     "./modules/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        gotham: "var(--font-gotham)",
+      },
+    },
   },
   plugins: [],
 };
